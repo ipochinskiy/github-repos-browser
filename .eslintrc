@@ -1,4 +1,7 @@
 {
+  "env": {
+    "node": true
+  },
   "extends": [
     "plugin:@typescript-eslint/recommended",
     "eslint:recommended"
@@ -23,8 +26,10 @@
         "ignoreCase": false,
         "ignoreDeclarationSort": false,
         "ignoreMemberSort": false,
-        "memberSyntaxSortOrder": ["none", "single", "multiple", "all"]
+        "memberSyntaxSortOrder": ["none", "all", "single", "multiple"]
       }
-    ]
+    ],
+    "object-curly-spacing": ["warn", "always"],
+    "eol-last": ["warn", "always"]
   }
 }
