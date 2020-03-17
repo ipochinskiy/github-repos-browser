@@ -1,6 +1,6 @@
 import { Request, Response } from 'express';
 
-import { HttpStatusCode } from '../../shared/http-status-codes';
+import { HttpStatusCode } from '../../../shared/http-status-codes';
 
 import { getRepositoryListByUsername } from './service';
 

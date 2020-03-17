@@ -3,7 +3,7 @@ import * as helmet from 'helmet';
 import * as morgan from 'morgan';
 
 import { getServerConfig } from './shared/config';
-import createV1Router from './v1';
+import createV1Router from './api/v1';
 
 const app = express();
 

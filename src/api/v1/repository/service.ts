@@ -5,7 +5,7 @@ import {
   RepositoryRaw,
   fetchBranchesByRepositoryFullName,
   fetchRepositoriesByUsername,
-} from '../../shared/github-facade';
+} from '../../../shared/github-facade';
 
 const mapRawRepositoryAndBranchToDTO = (
   rawRepository: RepositoryRaw,
