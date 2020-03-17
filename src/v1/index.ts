@@ -1,7 +1,7 @@
 import * as express from 'express';
 
 import { acceptOnlyJson } from '../shared/middleware/accept-only-json';
-import { createRepositoryController } from './controllers/repository-controller';
+import { createRepositoryController } from './repository/controller';
 
 export default (): express.Router => {
   const router = express.Router();
