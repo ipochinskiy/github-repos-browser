@@ -1,10 +1,15 @@
 import * as express from 'express';
-import { getRepositoryList } from './controllers/repository-controller';
+
 import { acceptOnlyJson } from '../shared/middleware/accept-only-json';
+import { createRepositoryController } from './controllers/repository-controller';
 
-const router = express.Router();
+export default () => {
+  const router = express.Router();
+  
+  router.use(acceptOnlyJson);
+  
+  const repositoryController = createRepositoryController();
+  router.get('/repositories', repositoryController.getRepositoryList);
 
-router.use(acceptOnlyJson);
-router.get('/repositories', getRepositoryList);
-
-export default router;
+  return router;
+};
