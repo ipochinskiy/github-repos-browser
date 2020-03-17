@@ -1,7 +1,7 @@
 import * as express from 'express';
-import { config as configEnvironment } from 'dotenv';
-import * as morgan from 'morgan';
 import * as helmet from 'helmet';
+import * as morgan from 'morgan';
+import { config as configEnvironment } from 'dotenv';
 
 import createV1Router from './v1';
 

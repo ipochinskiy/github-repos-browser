@@ -5,7 +5,7 @@
   "main": "./src/server.js",
   "scripts": {
     "dev": "ts-node ./src/server.ts",
-    "lint": "eslint --fix ./src/**/*",
+    "lint": "eslint --fix './src/**/*.ts'",
     "test": "jest"
   },
   "author": "Ilia Pochinskii",
