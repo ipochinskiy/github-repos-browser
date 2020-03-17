@@ -1,9 +1,10 @@
 {
   "compilerOptions": {
     "sourceMap": true,
-    "target": "es2017",
+    "target": "esnext",
     "outDir": "./dist",
-    "baseUrl": "./src"
+    "baseUrl": "./src",
+    "module": "commonjs"
   },
   "include": [
     "src/**/*.ts"
