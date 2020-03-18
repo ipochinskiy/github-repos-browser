@@ -11,9 +11,11 @@
   "author": "Ilia Pochinskii",
   "license": "MIT",
   "dependencies": {
+    "@types/compression": "^1.7.0",
     "@types/express": "^4.17.3",
     "@types/morgan": "^1.9.0",
     "axios": "~0.19.2",
+    "compression": "^1.7.4",
     "dotenv": "^8.2.0",
     "express": "^4.17.1",
     "helmet": "^3.21.3",
