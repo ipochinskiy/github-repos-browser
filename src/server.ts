@@ -3,6 +3,7 @@ import * as helmet from 'helmet';
 import * as morgan from 'morgan';
 
 import { getServerConfig } from './shared/config';
+
 import createV1Router from './api/v1';
 
 const app = express();
@@ -18,3 +19,8 @@ try {
 } catch (err) {
   console.error(err);
 }
+
+process.on('unhandledRejection', (error: Error) => {
+  console.error('ERROR: unhandledRejection', error);
+  process.exit(1);
+});
