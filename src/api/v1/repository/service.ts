@@ -36,7 +36,7 @@ export const getRepositoryListByUsername = async (username: string): Promise<Rep
   try {
     rawRepositoryList = await fetchRepositoriesByUsername(username);
   } catch (err) {
-    console.log('ERROR:', err);
+    console.error(err);
     rawRepositoryList = [];
   }
 
