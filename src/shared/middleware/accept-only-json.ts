@@ -1,8 +1,8 @@
 import { NextFunction, Request, Response } from 'express';
 import { HttpStatusCode } from '../http-status-codes';
 
-export const acceptOnlyJson = (request: Request, response: Response, next: NextFunction) => {
-  if(request.accepts('application/json')) {
+export const acceptOnlyJson = (request: Request, response: Response, next: NextFunction): Response|void => {
+  if (request.accepts('application/json')) {
     return next();
   }
 
