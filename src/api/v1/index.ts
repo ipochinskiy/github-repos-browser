@@ -1,6 +1,6 @@
 import * as express from 'express';
 
-import { acceptOnlyJson } from '../../shared/middleware/accept-only-json';
+import { acceptOnlyJson, handleApiError } from '../../shared/middleware';
 import { createRepositoryController } from './repository/controller';
 
 export default (): express.Router => {
@@ -10,6 +10,8 @@ export default (): express.Router => {
 
   const repositoryController = createRepositoryController();
   router.get('/repositories', repositoryController.getRepositoryList);
+
+  router.use(handleApiError);
 
   return router;
 };
