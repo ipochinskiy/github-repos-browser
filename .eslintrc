@@ -21,15 +21,6 @@
     "eqeqeq": ["error", "always"],
     "max-len": ["error", { "code": 140, "ignoreTrailingComments": true, "ignoreComments": true, "ignoreStrings": true }],
     "max-params": ["warn", 3],
-    "sort-imports": [
-      "warn",
-      {
-        "ignoreCase": false,
-        "ignoreDeclarationSort": false,
-        "ignoreMemberSort": false,
-        "memberSyntaxSortOrder": ["none", "all", "single", "multiple"]
-      }
-    ],
     "object-curly-spacing": ["warn", "always"],
     "eol-last": ["warn", "always"],
     "no-trailing-spaces": "warn"
