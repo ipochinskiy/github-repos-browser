@@ -6,7 +6,7 @@
   "scripts": {
     "dev": "ts-node ./index.ts",
     "lint": "eslint --fix './src/**/*.ts'",
-    "test": "jest"
+    "test": "jest --watch"
   },
   "author": "Ilia Pochinskii",
   "license": "MIT",
@@ -25,11 +25,13 @@
     "typescript": "^3.8.3"
   },
   "devDependencies": {
+    "@types/jest": "^25.1.4",
     "@typescript-eslint/eslint-plugin": "^2.23.0",
     "@typescript-eslint/parser": "^2.23.0",
     "eslint": "^6.8.0",
     "jest": "^25.1.0",
-    "supertest": "^4.0.2"
+    "supertest": "^4.0.2",
+    "ts-jest": "^25.2.1"
   },
   "engine": {
     "node": "~12.14.0",

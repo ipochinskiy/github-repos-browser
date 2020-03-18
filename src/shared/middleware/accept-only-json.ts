@@ -7,7 +7,7 @@ export const acceptOnlyJson = (request: Request, response: Response, next: NextF
   }
 
   // TODO: log it out
-  return response.status(HttpStatusCode.NOT_ACCEPTABLE).send({
+  return response.status(HttpStatusCode.NOT_ACCEPTABLE).json({
     status: HttpStatusCode.NOT_ACCEPTABLE,
     message: 'Unsupported content type',
   });

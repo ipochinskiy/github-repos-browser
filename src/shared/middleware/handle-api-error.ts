@@ -13,7 +13,7 @@ export const handleApiError = (
   }
 
   // TODO: log it out
-  return response.status(HttpStatusCode.INTERNAL_SERVER_ERROR).send({
+  return response.status(HttpStatusCode.INTERNAL_SERVER_ERROR).json({
     status: HttpStatusCode.INTERNAL_SERVER_ERROR,
     message: 'Internal Server Error',
   });
