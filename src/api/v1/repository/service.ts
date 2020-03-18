@@ -7,6 +7,7 @@ import {
   fetchRepositoriesByUsername,
 } from '../../../shared/github-facade';
 
+// TODO: move to separate service?
 const mapRawRepositoryAndBranchToDTO = (
   rawRepository: RepositoryRaw,
   rawBranchList: BranchRaw[] = [],
@@ -44,5 +45,6 @@ export const getRepositoryListByUsername = async (username: string): Promise<Rep
     .filter(repo => !!repo && !repo.fork)
     .map(promiseRepoBranchesAndMapToDTO);
 
-  return Promise.all(promisedRepositoryDTOList);
+  const nullableRepoList = await Promise.all(promisedRepositoryDTOList);
+  return nullableRepoList.filter(dto => !!dto);
 };
