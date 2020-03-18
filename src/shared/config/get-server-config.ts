@@ -1,8 +1,4 @@
-import { config as configEnvironment } from 'dotenv';
-
 import { ServerConfig } from './server-config';
-
-configEnvironment();
 
 export const getServerConfig = (): ServerConfig => {
   const PORT = process.env.PORT;

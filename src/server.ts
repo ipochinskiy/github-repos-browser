@@ -6,21 +6,14 @@ import { getServerConfig } from './shared/config';
 
 import createV1Router from './api/v1';
 
-const app = express();
+export const runServer = (): void => {
+  const app = express();
 
-app.use(helmet());
-app.use(morgan('combined'));
+  app.use(helmet());
+  app.use(morgan('combined'));
 
-app.use('/api/v1', createV1Router());
+  app.use('/api/v1', createV1Router());
 
-try {
   const { PORT } = getServerConfig();
   app.listen(PORT);
-} catch (err) {
-  console.error(err);
-}
-
-process.on('unhandledRejection', (error: Error) => {
-  console.error('ERROR: unhandledRejection', error);
-  process.exit(1);
-});
+};

@@ -2,9 +2,9 @@
   "name": "github-repos-browser",
   "version": "0.0.1",
   "description": "",
-  "main": "./src/server.js",
+  "main": "./index.js",
   "scripts": {
-    "dev": "ts-node ./src/server.ts",
+    "dev": "ts-node ./index.ts",
     "lint": "eslint --fix './src/**/*.ts'",
     "test": "jest"
   },
